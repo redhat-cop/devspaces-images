@@ -1,0 +1,20 @@
+# This is an image descriptor for CEkit
+
+schema_version: 1
+
+from: "registry.access.redhat.com/ubi9/ubi:9.2-722"
+name: &name "developer-base"
+version: &version "1.0"
+description: "Developer base image for Red Hat OpenShift Dev Spaces"
+
+modules:
+  repositories:
+  - path: modules
+  - git:
+      url: https://github.com/cgruver/dev-workspace-utilities.git
+      ref: main
+  install:
+  - name: developer-base
+  - name: custom-tooling
+  - name: openshift-tools
+  - name: yq

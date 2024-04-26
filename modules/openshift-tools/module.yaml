@@ -1,0 +1,13 @@
+schema_version: 1
+
+name: openshift-tools
+version: 1.0
+description: Module installing all of the standard openshift client tools
+
+execute:
+- script: oc.sh
+  user: root
+- script: kustomize.sh
+  user: root
+- script: helm.sh
+  user: root

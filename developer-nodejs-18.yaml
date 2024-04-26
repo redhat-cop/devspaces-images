@@ -1,0 +1,8 @@
+# This is an image descriptor for CEkit
+
+schema_version: 1
+
+from: "registry.access.redhat.com/ubi9/nodejs-18:1"
+name: &name "developer-nodejs-18"
+version: &version "1.0"
+description: "Developer image for Red Hat OpenShift Dev Spaces providing OpenJDK 17"
