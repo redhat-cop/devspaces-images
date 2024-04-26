@@ -1,0 +1,58 @@
+schema_version: 1
+
+name: developer-base
+description: Adds the devfile developer-base from https://github.com/devfile/developer-images
+version: '17'
+
+packages:
+  manager: dnf
+  install:
+  - compat-openssl11
+  - diffutils
+  - git
+  - iproute
+  - jq
+  - less
+  - libbrotli
+  - lsof
+  - man-db
+  - nano
+  - procps-ng
+  - perl-Digest-SHA
+  - net-tools
+  - openssh-clients
+  - rsync
+  - socat
+  - sudo
+  - time
+  - vim-enhanced
+  - wget
+  - zip
+  - buildah
+  - skopeo
+  - podman-docker
+
+artifacts:
+- name: entrypoint.sh
+  path: entrypoint.sh
+
+execute:
+- script: gh-cli.sh
+- script: ripgrep.sh
+- script: bat.sh
+- script: fd.sh
+- script: setup-entrypoint.sh
+
+envs:
+- name: HOME
+  value: /home/user
+
+run:
+  user: 10001
+  workdir: /projects
+  entrypoint:
+  - "/entrypoint.sh"
+  cmd:
+  - "tail"
+  - "-f"
+  - "/dev/null"

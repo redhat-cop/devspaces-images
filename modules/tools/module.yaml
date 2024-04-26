@@ -1,0 +1,12 @@
+schema_version: 1
+
+name: custom-tooling
+version: 1.0
+description: Module adding org specific developer net-tools
+
+packages:
+  install:
+  - zsh
+
+execute:
+- script: ohmyz.sh

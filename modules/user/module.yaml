@@ -1,0 +1,12 @@
+schema_version: 1
+
+name: user
+version: 1.0
+description: "Creates a regular user that could be used to run any service, gui/uid: 1000"
+
+execute:
+  - script: create.sh
+
+run:
+   user: 1000
+   workdir: "/home/user"
