@@ -22,6 +22,16 @@ components:
 - volume:
     size: 10Gi
   name: projects
+- name: cekit-test
+  container:
+    image: quay.io/etsauer/cekit-builder:dev
+    memoryLimit: 6Gi
+    mountSources: true
+    env:
+    - name: SHELL
+      value: "/bin/zsh"
+    - name: HOME
+      value: "/projects/home"
 - name: oc-cli
   container:
     args:
