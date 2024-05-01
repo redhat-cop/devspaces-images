@@ -1,0 +1,17 @@
+# Local Dev Setup
+
+These instructions are for anyone wanting to contribute this repo using a local deployment of Dev Spaces. These instructions will get your cluster set up
+
+1. Provision a new OpenShift cluster either in lab equipment or using [OpenShift Local](https://developers.redhat.com/products/openshift-local/overview) on your local machine.
+1. Create a [GitHub Oauth App](https://github.com/settings/applications/new) for DevSpaces, and export the client id and secret to your environment.
+    ```bash
+    export GITHUB_OAUTH_CLIENT_ID=<client id>
+    export GITHUB_OAUTH_CLIENT_SECRET=<client secret>
+    ```
+1. Apply configs to install Dev Spaces and Pelorus
+```bash
+oc apply -f .bootstrap/namespaces.yaml
+oc apply -f .bootstrap/devspaces-operator.yaml
+envsubst < .bootstrap/github-oauth.yaml | oc apply -f -
+oc apply -f .bootstrap/devspaces.yaml
+```
