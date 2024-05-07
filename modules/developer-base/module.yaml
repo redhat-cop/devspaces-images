@@ -6,6 +6,7 @@ version: '17'
 
 packages:
   manager: dnf
+  manager_flags: "--disableplugin=subscription-manager --setopt=tsflags=nodocs --setopt=install_weak_deps=0"
   install:
   - compat-openssl11
   - diffutils

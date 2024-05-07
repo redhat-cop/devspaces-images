@@ -2,10 +2,17 @@
 
 schema_version: 1
 
-from: "registry.access.redhat.com/ubi9/ubi:9.2-722"
+from: "registry.access.redhat.com/ubi9/ubi:9.4"
 name: &name "developer-base"
 version: &version "1.0"
 description: "Developer base image for Red Hat OpenShift Dev Spaces"
+
+envs:
+- name: WORK_DIR
+  value: /projects
+- name: BUILDAH_ISOLATION
+  value: chroot
+
 
 modules:
   repositories:
