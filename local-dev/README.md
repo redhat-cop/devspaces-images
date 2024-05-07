@@ -10,8 +10,8 @@ These instructions are for anyone wanting to contribute this repo using a local 
     ```
 1. Apply configs to install Dev Spaces and Pelorus
 ```bash
-oc apply -f .bootstrap/namespaces.yaml
-oc apply -f .bootstrap/devspaces-operator.yaml
-envsubst < .bootstrap/github-oauth.yaml | oc apply -f -
-oc apply -f .bootstrap/devspaces.yaml
+oc apply -f local-dev/namespaces.yaml
+oc apply -f local-dev/devspaces-operator.yaml
+envsubst < local-dev/github-oauth-config-secret.yaml | oc apply -f -
+oc apply -f local-dev/devspaces-cr.yaml
 ```
