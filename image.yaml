@@ -10,6 +10,9 @@ description: "Developer base image for Red Hat OpenShift Dev Spaces"
 envs:
 - name: WORK_DIR
   value: /projects
+- name: BUILDAH_ISOLATION
+  value: chroot
+
 
 modules:
   repositories:

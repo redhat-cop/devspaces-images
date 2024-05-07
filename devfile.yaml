@@ -7,7 +7,7 @@ components:
 - name: dev-tools
   container:
     # image: image-registry.openshift-image-registry.svc:5000/devspaces-images/cekit-builder:latest 
-    image: quay.io/cgruver0/che/cekit-builder:latest
+    image: quay.io/etsauer/cekit-builder:dev
     memoryLimit: 6Gi
     mountSources: true
     env:
