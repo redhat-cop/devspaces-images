@@ -5,10 +5,11 @@ chown 0:0 /entrypoint.sh
 # Setup $PS1 for a consistent and reasonable prompt
 echo "export PS1='\W \`git branch --show-current 2>/dev/null | sed -r -e \"s@^(.+)@\(\1\) @\"\`$ '" >> /home/user/.bashrc
 # Set permissions on /etc/passwd and /home to allow arbitrary users to write
-chgrp -R 0 /home
+chgrp -R 0 /home /etc/passwd /etc/group /etc/subuid /etc/subgid /home ${WORK_DIR}
 
 # Setup for root-less podman
 mkdir -p "${HOME}"/.config/containers;
+mkdir -p "${HOME}/.cache"
 setcap cap_setuid+ep /usr/bin/newuidmap;
 setcap cap_setgid+ep /usr/bin/newgidmap;
 touch /etc/subgid /etc/subuid;

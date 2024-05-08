@@ -56,3 +56,10 @@ podman build -t nodejs-containerfile target/image
 ```
 
 This is useful for supporting a mixed mode where you want to have a streamlined CI process for producing images for your project, but would also like to make it easy for consumers of your project to build the images themselves without extra tooling.
+
+
+## Quick Commands to build images
+
+```bash
+cekit build --overrides images/cekit-builder.yaml podman --tag quay.io/etsauer/cekit-builder:dev
+```

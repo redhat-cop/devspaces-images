@@ -12,7 +12,8 @@ envs:
   value: /projects
 - name: BUILDAH_ISOLATION
   value: chroot
-
+- name: HOME
+  value: /home/user
 
 modules:
   repositories:
