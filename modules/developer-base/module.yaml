@@ -5,7 +5,6 @@ description: Adds the devfile developer-base from https://github.com/devfile/dev
 version: '17'
 
 packages:
-  manager: dnf
   manager_flags: "--disableplugin=subscription-manager --setopt=tsflags=nodocs --setopt=install_weak_deps=0"
   install:
   - compat-openssl11
@@ -32,6 +31,8 @@ packages:
   - buildah
   - skopeo
   - podman-docker
+  - fuse-overlayfs
+  - slirp4netns
 
 artifacts:
 - name: entrypoint.sh

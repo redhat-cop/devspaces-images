@@ -15,3 +15,15 @@ oc apply -f local-dev/devspaces-operator.yaml
 envsubst < local-dev/github-oauth-config-secret.yaml | oc apply -f -
 oc apply -f local-dev/devspaces-cr.yaml
 ```
+
+Now log in as a a developer user and do the following:
+
+1. Create a couple environment variables to specify your git author name and email.
+    ```bash
+    export USER_NAME=<Full Name>
+    export USER_EMAIL=<email>
+    ```
+1. Then apply this to your devspaces namespace
+    ```bash
+    envsubst < local-dev/gitconfig-cm.yaml | oc apply -f -
+    ```
