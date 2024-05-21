@@ -1,5 +1,7 @@
 # Controls when the workflow will run
 on:
+  push:
+    branches: ["image-ci"]
   pull_request:
     branches: [ "main" ]
 
