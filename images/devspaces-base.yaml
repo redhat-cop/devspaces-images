@@ -2,6 +2,6 @@
 
 schema_version: 1
 
-name: &name "developer-base"
+name: &name "devspaces-base"
 version: &version "1.0"
 description: "Developer base image for Red Hat OpenShift Dev Spaces"

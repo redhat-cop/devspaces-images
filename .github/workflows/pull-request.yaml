@@ -1,0 +1,18 @@
+# Controls when the workflow will run
+on:
+  push:
+    branches: ["image-ci"]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-images:
+    strategy:
+      fail-fast: false
+      matrix:
+        image: ['cekit-builder', 'devspaces-base', 'devspaces-openjdk-17', 'devspaces-nodejs-18']
+    uses: ./.github/workflows/cekit-build.yaml
+    with:
+      tag: quay.io/redhat-cop/${{ matrix.image }}:pr-${{ github.sha }}
+      image: ${{ matrix.image }}
+    secrets: inherit
