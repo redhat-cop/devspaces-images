@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        image: ['cekit-builder', 'devspaces-base', 'devspaces-openjdk-17', 'devspaces-nodejs-18']
+        image: ['cekit-builder', 'devspaces-base', 'devspaces-openjdk-17', 'devspaces-nodejs-18', 'devspaces-java-node-combined']
     uses: ./.github/workflows/cekit-build.yaml
     with:
       tag: quay.io/redhat-cop/${{ matrix.image }}:pr-${{ github.sha }}

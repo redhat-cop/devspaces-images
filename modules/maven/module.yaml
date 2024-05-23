@@ -1,0 +1,9 @@
+schema_version: 1
+name: maven
+version: v1.0
+description: "Installs Apache Maven"
+args:
+- name: MAVEN_VERSION
+  value: 3.9.6
+execute:
+- script: install.sh

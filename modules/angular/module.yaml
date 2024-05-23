@@ -1,0 +1,6 @@
+schema_version: 1
+name: angular
+version: latest
+description: "Installs the Angular UI Framework"
+execute:
+- script: install.sh

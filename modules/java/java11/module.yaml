@@ -1,0 +1,10 @@
+schema_version: 1
+name: java`1
+version: v1.0
+description: "Installs JDK 11"
+envs:
+- name: JAVA_HOME
+  value: /etc/alternatives/jre_11_openjdk
+packages:
+  install:
+  - java-11-openjdk-devel

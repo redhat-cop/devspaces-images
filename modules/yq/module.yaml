@@ -1,0 +1,6 @@
+schema_version: 1
+name: yq
+version: v1.0
+description: "Installs the YQ CLI"
+execute:
+- script: install.sh

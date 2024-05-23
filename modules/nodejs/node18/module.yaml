@@ -1,0 +1,12 @@
+schema_version: 1
+name: node18
+version: v1.0
+description: "Installs NodeJS v18"
+args:
+- name: NODE_VERSION
+  value: v18.19.0
+envs:
+- name: PATH
+  value: ${PATH}:/usr/local/node/bin
+execute:
+- script: install.sh
