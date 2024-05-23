@@ -13,9 +13,6 @@ on:
       tag:
         required: true
         type: string
-      push:
-        type: boolean
-        required: true
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -40,7 +37,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Push Image
-        if: ${{ inputs.push }}
+        if: ${{ env.GITHUB_REPOSITORY_OWNER }} == 'redhat-cop'
         env:
           USER: ${{ secrets.QUAY_ROBOT_USER }}
           TOKEN: ${{ secrets.QUAY_ROBOT_TOKEN }}
