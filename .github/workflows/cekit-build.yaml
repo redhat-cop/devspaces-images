@@ -37,6 +37,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Push Image
+        if: ${{ github.event.pull_request.head.repo.full_name == 'redhat-cop/devspaces-images' }}
         env:
           USER: ${{ secrets.QUAY_ROBOT_USER }}
           TOKEN: ${{ secrets.QUAY_ROBOT_TOKEN }}

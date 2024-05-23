@@ -1,0 +1,10 @@
+schema_version: 1
+name: java17
+version: v1.0
+description: "Installs JDK 17"
+envs:
+- name: JAVA_HOME
+  value: /etc/alternatives/jre_17_openjdk
+packages:
+  install:
+  - java-17-openjdk-devel
