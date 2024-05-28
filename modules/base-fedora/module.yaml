@@ -1,0 +1,47 @@
+schema_version: 1
+name: base-fedora
+version: v1.0
+description: "Setup for base image"
+artifacts:
+- name: entrypoint
+  path: entrypoint.sh
+  target: entrypoint.sh
+- name: entrypoint-nested
+  path: entrypoint-nested.sh
+  target: entrypoint-nested.sh
+envs:
+- name: HOME
+  value: /home/user
+- name: BUILDAH_ISOLATION
+  value: "chroot"
+- name: VSCODE_NODEJS_RUNTIME_DIR
+  value: "/usr/local/node/bin/"
+packages:
+  install:
+  - procps-ng 
+  - openssl
+  - openssh-clients
+  - libbrotli 
+  - git 
+  - tar 
+  - gzip 
+  - zip 
+  - xz 
+  - unzip 
+  - which 
+  - shadow-utils 
+  - bash 
+  - zsh 
+  - vim-enhanced
+  - wget2
+  - jq 
+  - ca-certificates
+  - podman 
+  - buildah 
+  - skopeo 
+  - podman-docker
+  - fuse-overlayfs
+  - slirp4netns
+  - python3.9
+execute:
+- script: init.sh

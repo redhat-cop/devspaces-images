@@ -1,0 +1,25 @@
+name: devspaces-nested-podman-fedora
+from: quay.io/fedora/fedora:40
+version: fedora40
+
+packages:
+  manager: dnf
+  manager_flags: "--setopt=tsflags=nodocs --setopt=install_weak_deps=0"
+modules:
+  repositories:
+  - path: "../modules"
+  install:
+  - name: base-fedora
+  - name: ansible
+  - name: aws-cli
+  - name: java21
+  - name: maven
+  - name: quarkus
+  - name: node18
+run:
+  entrypoint:
+  - "/entrypoint-nested.sh"
+  cmd:
+  - "tail"
+  - "-f"
+  - "/dev/null"

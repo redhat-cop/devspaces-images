@@ -1,0 +1,10 @@
+schema_version: 1
+name: aws-cli
+version: v1.0
+description: "Installs AWS CLI"
+packages:
+  install:
+  - python3-pip 
+  - python3-devel
+execute:
+- script: install.sh
