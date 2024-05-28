@@ -1,0 +1,22 @@
+name: devspaces-nested-podman
+from: registry.access.redhat.com/ubi9/ubi-minimal
+version: ubi9
+packages:
+  manager: microdnf
+  manager_flags: "--disableplugin=subscription-manager --setopt=tsflags=nodocs --setopt=install_weak_deps=0"
+modules:
+  repositories:
+  - path: "../modules"
+  install:
+  - name: ansible
+  - name: aws-cli
+  - name: java21
+  - name: maven
+  - name: quarkus
+run:
+  entrypoint:
+  - "/entrypoint-nested.sh"
+  cmd:
+  - "tail"
+  - "-f"
+  - "/dev/null"
