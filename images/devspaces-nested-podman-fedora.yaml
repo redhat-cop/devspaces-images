@@ -1,6 +1,6 @@
 name: devspaces-nested-podman-fedora
 from: quay.io/fedora/fedora:40
-version: fedora39
+version: fedora40
 
 packages:
   manager: dnf
