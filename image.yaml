@@ -7,10 +7,6 @@ name: &name "developer-base"
 version: &version "1.0"
 description: "Developer base image for Red Hat OpenShift Dev Spaces"
 
-args:
-- name: "OPENSSL_PKG"
-  value: "compat-openssl11"
-  
 envs:
 - name: WORK_DIR
   value: /projects

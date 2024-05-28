@@ -1,9 +1,7 @@
 name: devspaces-nested-podman-fedora
 from: quay.io/fedora/fedora:40
 version: fedora39
-args:
-    - name: "OPENSSL_PKG"
-      value: "compat-openssl11"
+
 packages:
   manager: dnf
   manager_flags: "--setopt=tsflags=nodocs --setopt=install_weak_deps=0"
