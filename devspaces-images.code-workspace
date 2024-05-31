@@ -4,10 +4,8 @@
 			"path": "."
 		},
 		{
-			"path": "../dev-workspace-utilities"
-		},
-		{
-			"path": "../devspaceify"
+			"name": "devspaces-images",
+			"path": "/projects/devspaces-images"
 		}
 	],
 	"extensions": {

@@ -6,15 +6,14 @@ metadata:
 components:
 - name: dev-tools
   container:
-    # image: quay.io/cgruver0/che/cekit-builder:latest
-    image: quay.io/etsauer/cekit-builder:dev
+    image: quay.io/redhat-cop/cekit-builder:latest
     memoryLimit: 6Gi
     mountSources: true
     env:
     - name: SHELL
       value: "/bin/zsh"
     - name: VSCODE_DEFAULT_WORKSPACE
-      value: "/projects/dev-workspace-utilities/dev-workspace-utilities.code-workspace"
+      value: "/projects/devspaces-images/devspaces-images.code-workspace"
     - name: GOPATH
       value: /projects/home/go
 - volume:
