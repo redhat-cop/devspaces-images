@@ -54,7 +54,7 @@ cekit build --overrides images/devspaces-openjdk-17.yaml podman
 To build a NodeJS 18 image, run:
 
 ```
-cekit build --overrides images/developer-nodejs-18.yaml podman
+cekit build --overrides images/devspaces-nodejs-18.yaml podman
 ```
 
 ## Need a Containerfile? You Got it!
