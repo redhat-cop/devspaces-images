@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-npm install -g yarn angular
+npm install -g yarn @angular/cli serverless
