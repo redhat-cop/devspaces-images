@@ -1,0 +1,14 @@
+# This is an image descriptor for CEkit
+
+schema_version: 1
+
+from: "registry.access.redhat.com/ubi9/nodejs-20:1"
+name: &name "devspaces-nodejs-20"
+version: &version "1.0"
+description: "Developer image for Red Hat OpenShift Dev Spaces providing NodeJS 18"
+
+modules:
+  repositories:
+  - path: "../modules"
+  install:
+  - name: node-tools
