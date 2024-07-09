@@ -13,6 +13,7 @@ This repo automatically publishes the following images that are available to use
 - quay.io/redhat-cop/devspaces-base:latest
 - quay.io/redhat-cop/devspaces-openjdk-17:latest
 - quay.io/redhat-cop/devspaces-nodejs-18:latest
+- quay.io/redhat-cop/devspaces-nodejs-20:latest
 - quay.io/redhat-cop/devspaces-java-node-combined:latest
 - quay.io/redhat-cop/devspaces-nested-podman:latest
 - quay.io/redhat-cop/cekit-builder:latest
@@ -76,6 +77,7 @@ cekit build --overrides images/cekit-builder.yaml podman
 cekit build --overrides images/devspaces-base.yaml podman
 cekit build --overrides images/devspaces-openjdk-17.yaml podman
 cekit build --overrides images/devspaces-nodejs-18.yaml podman
+cekit build --overrides images/devspaces-nodejs-20.yaml podman
 cekit build --overrides images/devspaces-java-node-combined.yaml podman
 cekit build --overrides images/devspaces-nested-podman podman
 ```
