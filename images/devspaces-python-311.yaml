@@ -1,0 +1,14 @@
+# This is an image descriptor for CEkit
+
+schema_version: 1
+
+from: "registry.access.redhat.com/ubi9/python-311:1"
+name: &name "devspaces-python-311"
+version: &version "1.0"
+description: "Developer image for Red Hat OpenShift Dev Spaces providing Python 3.11"
+
+modules:
+  repositories:
+  - path: "../modules"
+  install:
+  - name: node-tools

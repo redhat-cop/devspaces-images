@@ -79,5 +79,6 @@ cekit build --overrides images/devspaces-openjdk-17.yaml podman
 cekit build --overrides images/devspaces-nodejs-18.yaml podman
 cekit build --overrides images/devspaces-nodejs-20.yaml podman
 cekit build --overrides images/devspaces-java-node-combined.yaml podman
-cekit build --overrides images/devspaces-nested-podman podman
+cekit build --overrides images/devspaces-nested-podman.yaml podman
+cekit build --overrides images/devspaces-python-311.yaml podman
 ```
