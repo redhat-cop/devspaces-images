@@ -1,0 +1,8 @@
+schema_version: 1
+name: python3
+version: v1.0
+description: "Installs Python 3"
+packages:
+  install:
+  - python3-pip 
+  - python3-devel
