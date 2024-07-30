@@ -6,3 +6,5 @@ packages:
   install:
   - python3.11-pip 
   - python3.11-devel
+execute:
+- script: alternatives.sh
