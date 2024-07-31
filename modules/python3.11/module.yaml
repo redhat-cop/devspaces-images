@@ -1,0 +1,10 @@
+schema_version: 1
+name: python3.11
+version: v1.0
+description: "Installs Python 3.11"
+packages:
+  install:
+  - python3.11-pip 
+  - python3.11-devel
+execute:
+- script: alternatives.sh
