@@ -19,3 +19,19 @@ chmod -R g=u /etc/passwd /etc/group /etc/subuid /etc/subgid /home ${WORK_DIR}
 # Setup for dynamic oc & kubectl
 ln -s /projects/bin/oc /usr/local/bin/oc;
 ln -s /projects/bin/kubectl /usr/local/bin/kubectl;
+
+# Detect package manager and make sure packages are up to date
+pkg_mgr=""
+if command -v dnf &> /dev/null
+then
+    pkg_mgr=dnf
+elif command -v microdnf &> /dev/null
+then
+    pkg_mgr=microdnf
+else
+    echo "No compatible package manager could not be found"
+    exit 1
+fi
+
+$pkg_mgr update -y
+$pkg_mgr clean -y all
