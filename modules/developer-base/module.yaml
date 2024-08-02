@@ -7,32 +7,34 @@ version: '17'
 packages:
   manager_flags: "--disableplugin=subscription-manager --setopt=tsflags=nodocs --setopt=install_weak_deps=0"
   install:
+  - buildah
   - compat-openssl11
   - diffutils
+  - fuse-overlayfs
+  - gcc
   - git
   - iproute
   - jq
   - less
   - libbrotli
   - lsof
+  - make
   - man-db
   - nano
-  - procps-ng
-  - perl-Digest-SHA
   - net-tools
   - openssh-clients
+  - podman-docker
+  - procps-ng
+  - perl-Digest-SHA
   - rsync
+  - skopeo
+  - slirp4netns
   - socat
   - sudo
   - time
   - vim-enhanced
   - wget
   - zip
-  - buildah
-  - skopeo
-  - podman-docker
-  - fuse-overlayfs
-  - slirp4netns
 
 artifacts:
 - name: entrypoint.sh
