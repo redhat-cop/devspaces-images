@@ -23,6 +23,7 @@ packages:
   - nano
   - net-tools
   - openssh-clients
+  - patch
   - podman-docker
   - procps-ng
   - perl-Digest-SHA
