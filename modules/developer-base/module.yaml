@@ -12,6 +12,7 @@ packages:
   - diffutils
   - fuse-overlayfs
   - gcc
+  - gettext
   - git
   - iproute
   - jq
