@@ -10,3 +10,4 @@ packages:
 
 execute:
 - script: ohmyz.sh
+- script: workspace-env.sh
