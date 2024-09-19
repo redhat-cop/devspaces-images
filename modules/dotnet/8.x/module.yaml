@@ -1,0 +1,13 @@
+schema_version: 1
+name: dotnet-8
+version: v1.0
+description: "Installs .NET 8"
+args:
+- name: DOTNET_RPM_VERSION
+  value: 8.0
+packages:
+  manager_flags: "--disableplugin=subscription-manager --setopt=tsflags=nodocs --setopt=install_weak_deps=0"
+  install:
+  - dotnet-hostfxr-${DOTNET_RPM_VERSION}
+  - dotnet-runtime-${DOTNET_RPM_VERSION}
+  - dotnet-sdk-${DOTNET_RPM_VERSION}
