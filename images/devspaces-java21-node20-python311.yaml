@@ -12,4 +12,5 @@ modules:
   - name: node20
   - name: angular
   - name: quarkus
+  - name: jbang
   - name: python3.11

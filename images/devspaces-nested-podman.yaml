@@ -13,6 +13,7 @@ modules:
   - name: java21
   - name: maven
   - name: quarkus
+  - name: jbang
 run:
   entrypoint:
   - "/entrypoint-nested.sh"

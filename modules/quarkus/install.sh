@@ -11,6 +11,3 @@ chmod +x /usr/local/quarkus-cli/bin/quarkus
 rm -rf "${TEMP_DIR}" 
 cd /usr/local/bin
 ln -s ../quarkus-cli/bin/quarkus quarkus
-mkdir -p ${JBANG_DIR}
-curl -Ls https://sh.jbang.dev | bash -s - app setup
-ln -s ${JBANG_DIR}/bin/jbang /usr/local/bin/jbang

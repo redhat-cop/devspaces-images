@@ -15,6 +15,7 @@ modules:
   - name: java21
   - name: maven
   - name: quarkus
+  - name: jbang
   - name: node18
 run:
   entrypoint:
