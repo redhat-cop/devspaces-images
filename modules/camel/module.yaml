@@ -1,0 +1,6 @@
+schema_version: 1
+name: camel
+version: v1.0
+description: "Confgure JBang and install Camel CLI"
+execute:
+- script: install.sh

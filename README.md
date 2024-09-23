@@ -75,6 +75,7 @@ This is useful for supporting a mixed mode where you want to have a streamlined 
 ```bash
 cekit build --overrides images/cekit-builder.yaml podman
 cekit build --overrides images/devspaces-base.yaml podman
+cekit build --overrides images/devspaces-camel.yaml podman
 cekit build --overrides images/devspaces-openjdk-17.yaml podman
 cekit build --overrides images/devspaces-nodejs-18.yaml podman
 cekit build --overrides images/devspaces-nodejs-20.yaml podman

@@ -5,8 +5,5 @@ description: "Installs the Quarkus CLI"
 args:
 - name: QUARKUS_VERSION
   value: 3.6.6
-envs:
-- name: JBANG_DIR
-  value: "/usr/local/jbang"
 execute:
 - script: install.sh

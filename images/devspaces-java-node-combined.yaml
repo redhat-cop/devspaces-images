@@ -12,3 +12,4 @@ modules:
   - name: node20
   - name: angular
   - name: quarkus
+  - name: jbang

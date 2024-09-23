@@ -1,0 +1,9 @@
+schema_version: 1
+name: jbang
+version: v1.0
+description: "Installs JBang CLI"
+envs:
+- name: JBANG_DIR
+  value: "/usr/local/jbang"
+execute:
+- script: install.sh
