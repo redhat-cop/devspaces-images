@@ -20,7 +20,7 @@ This repo automatically publishes the following images that are available to use
 
 ## Developer-optimized container images using CEkit
 
-[CEkit](https://cekit.io) is a modular, YAML-based framework for generating Containerfile-driven images that can be built using Docker, Podman or Buildah. To acheive our developer-optimized image builds, we're going to use a 3 layered approach:
+[CEkit](https://cekit.io) is a modular, YAML-based framework for generating Containerfile-driven images that can be built using Docker, Podman or Buildah. To achieve our developer-optimized image builds, we're going to use a 3 layered approach:
 
 1. A base image that already contains the language, framework, or libraries we need to run our app. In this case we're selecting [language images](https://catalog.redhat.com/software/containers/search?gs&q=ubi) built on top of Red Hat's [Universal Base Images](https://catalog.redhat.com/software/base-images)
 2. A _developer base_ layer that provides all the basic tools and libraries generally desired for running workspaces. Based on the [Devfile.io Developer Base Image](https://github.com/devfile/developer-images#developer-base-image).
@@ -60,7 +60,7 @@ cekit build --overrides images/devspaces-nodejs-18.yaml podman
 
 ## Need a Containerfile? You Got it!
 
-If you still have a need or desire to provide a raw Containerfile for people to build, CEkit has you covered there too. In addition to the build image, the `cekit build` command also outputs the full source for the image, including a generated containerfile, which can be built directly usin Docker, Podman or Buildah. For example, after running the NodeJS example above, I can also run:
+If you still have a need or desire to provide a raw Containerfile for people to build, CEkit has you covered there too. In addition to the build image, the `cekit build` command also outputs the full source for the image, including a generated containerfile, which can be built directly using Docker, Podman or Buildah. For example, after running the NodeJS example above, I can also run:
 
 
 ```
