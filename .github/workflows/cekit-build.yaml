@@ -45,7 +45,7 @@ jobs:
           image-path: ${{ inputs.image }}
           mode: report
           format: sarif
-          dp-file: scan.db
+          db-file: scan.db
           output: clair_results.sarif
 
       # Runs a set of commands using the runners shell
