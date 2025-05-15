@@ -37,7 +37,7 @@ jobs:
 
       - name: Save image to archive for scanning
         run: |
-          podman save -o ${{ inputs.tag }} ${{ inputs.tag }}
+          podman save -o ${{ inputs.image }} ${{ inputs.tag }}
 
       - name: Run Clair V4
         uses: quay/clair-action@main
