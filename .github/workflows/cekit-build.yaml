@@ -36,7 +36,7 @@ jobs:
           cekit build --overrides images/${{ inputs.image }}.yaml podman --tag=${{ inputs.tag }}
 
       - name: Save image to archive for scanning
-        run: /
+        run: |
           podman save -o ${{ inputs.tag }} ${{ inputs.tag }}
 
       - name: Run Clair V4
