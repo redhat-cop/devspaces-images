@@ -35,6 +35,17 @@ jobs:
         run: |
           cekit build --overrides images/${{ inputs.image }}.yaml podman --tag=${{ inputs.tag }}
 
+      - name: Save image to archive for scanning
+        run: /
+          podman save -o ${{ inputs.tag }} ${{ inputs.tag }}
+
+      - name: Run Clair V4
+        uses: quay/clair-action@main
+        with:
+          image-path: ${{ inputs.tag }}
+          format: sarif
+          output: clair_results.sarif
+
       # Runs a set of commands using the runners shell
       - name: Push Image
         if: ${{ github.event.pull_request.head.repo.full_name == 'redhat-cop/devspaces-images' || github.ref_name == 'main' }}
