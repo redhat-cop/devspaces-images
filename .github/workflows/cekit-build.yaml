@@ -42,7 +42,7 @@ jobs:
       - name: Run Clair V4
         uses: quay/clair-action@main
         with:
-          image-path: ${{ inputs.tag }}
+          image-path: ${{ inputs.image }}
           format: sarif
           output: clair_results.sarif
 
