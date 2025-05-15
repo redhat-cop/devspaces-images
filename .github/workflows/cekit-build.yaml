@@ -43,6 +43,7 @@ jobs:
         uses: quay/clair-action@main
         with:
           image-path: ${{ inputs.image }}
+          mode: report
           format: sarif
           output: clair_results.sarif
 
