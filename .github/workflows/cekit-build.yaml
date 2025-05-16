@@ -54,7 +54,7 @@ jobs:
           name: sarif-${{ inputs.image }}
           path: clair_results-${{ inputs.image }}.sarif
       - name: Upload sarif
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: clair_results-${{ inputs.image }}.sarif
 
