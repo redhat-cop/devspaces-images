@@ -48,6 +48,16 @@ jobs:
           db-file: scan.db
           output: clair_results.sarif
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sarif
+          path: clair_results.sarif
+      - name: Upload sarif
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: clair_results.sarif
+
       # Runs a set of commands using the runners shell
       - name: Push Image
         if: ${{ github.event.pull_request.head.repo.full_name == 'redhat-cop/devspaces-images' || github.ref_name == 'main' }}
