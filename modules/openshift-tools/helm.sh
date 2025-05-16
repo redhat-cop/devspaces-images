@@ -1,5 +1,5 @@
 echo "Installing openshift client..."
-version=3.12.1
+version=3.17.3
 arch=linux-amd64
 curl -sLO "https://developers.redhat.com/content-gateway/file/pub/openshift-v4/clients/helm/${version}/helm-${arch}.tar.gz"
 tar xzf ./helm-${arch}.tar.gz
