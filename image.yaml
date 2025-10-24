@@ -22,4 +22,5 @@ modules:
   - name: developer-base
   - name: custom-tooling
   - name: openshift-tools
+  - name: aws-cli
   - name: yq
