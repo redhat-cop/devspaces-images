@@ -9,7 +9,7 @@ chgrp -R 0 /home /etc/passwd /etc/group /etc/subuid /etc/subgid /home ${WORK_DIR
 
 # Setup for root-less podman
 #mkdir -p "${HOME}"/.config/containers;
-#mkdir -p "${HOME}/.cache"
+#mkdir -p "${HOME}/.cache";
 setcap cap_setuid+ep /usr/bin/newuidmap;
 setcap cap_setgid+ep /usr/bin/newgidmap;
 touch /etc/subgid /etc/subuid;
