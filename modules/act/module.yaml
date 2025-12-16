@@ -1,0 +1,6 @@
+schema_version: 1
+name: act
+version: v1.0
+description: "Installs ACT CLI for local github workflow testing"
+execute:
+- script: install.sh

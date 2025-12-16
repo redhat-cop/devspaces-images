@@ -7,3 +7,4 @@ modules:
   - name: argocd-cli
   - name: kubectx
   - name: stern
+  - name: act
