@@ -4,3 +4,4 @@ modules:
   - path: "../modules"
   install:
   - name: ansible
+  - name: argocd-cli
