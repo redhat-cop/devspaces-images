@@ -6,3 +6,4 @@ modules:
   - name: ansible
   - name: argocd-cli
   - name: kubectx
+  - name: stern
