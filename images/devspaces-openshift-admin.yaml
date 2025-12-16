@@ -5,3 +5,4 @@ modules:
   install:
   - name: ansible
   - name: argocd-cli
+  - name: kubectx
