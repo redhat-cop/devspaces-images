@@ -1,0 +1,10 @@
+name: devspaces-openshift-admin
+modules:
+  repositories:
+  - path: "../modules"
+  install:
+  - name: ansible
+  - name: argocd-cli
+  - name: kubectx
+  - name: stern
+  - name: act

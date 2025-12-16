@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        image: [ 'cekit-builder', 'devspaces-base', 'devspaces-openjdk-17', 'devspaces-nodejs-18', 'devspaces-nodejs-20', 'devspaces-java-node-combined', 'devspaces-nested-podman', 'devspaces-python-311', 'devspaces-java21-node20-python311', 'devspaces-dotnet-8' ]
+        image: [ 'cekit-builder', 'devspaces-base', 'devspaces-openjdk-17', 'devspaces-nodejs-18', 'devspaces-nodejs-20', 'devspaces-java-node-combined', 'devspaces-nested-podman', 'devspaces-python-311', 'devspaces-java21-node20-python311', 'devspaces-dotnet-8', 'devspaces-openshift-admin' ]
     uses: ./.github/workflows/cekit-build.yaml
     with:
       tag: quay.io/redhat-cop/${{ matrix.image }}:latest

@@ -1,0 +1,6 @@
+schema_version: 1
+name: stern
+version: v1.0
+description: "Installs Stern CLI"
+execute:
+- script: install.sh

@@ -1,0 +1,6 @@
+schema_version: 1
+name: kubectx
+version: v1.0
+description: "Installs KubeCTX and kubeNS clis"
+execute:
+- script: install.sh

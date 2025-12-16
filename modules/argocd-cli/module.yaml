@@ -1,0 +1,6 @@
+schema_version: 1
+name: argocd-cli
+version: v1.0
+description: "Installs Argo CLI"
+execute:
+- script: install.sh

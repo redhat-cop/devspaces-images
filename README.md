@@ -16,6 +16,7 @@ This repo automatically publishes the following images that are available to use
 - quay.io/redhat-cop/devspaces-nodejs-20:latest
 - quay.io/redhat-cop/devspaces-java-node-combined:latest
 - quay.io/redhat-cop/devspaces-nested-podman:latest
+- quay.io/redhat-cop/devspaces-openshift-admin:latest
 - quay.io/redhat-cop/cekit-builder:latest
 
 ## Developer-optimized container images using CEkit
@@ -81,4 +82,5 @@ cekit build --overrides images/devspaces-nodejs-20.yaml podman
 cekit build --overrides images/devspaces-java-node-combined.yaml podman
 cekit build --overrides images/devspaces-nested-podman.yaml podman
 cekit build --overrides images/devspaces-python-311.yaml podman
+cekit build --overrides images/devspaces-openshift-admin.yaml podman
 ```
