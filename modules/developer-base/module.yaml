@@ -33,6 +33,7 @@ packages:
   - slirp4netns
   - socat
   - sudo
+  - tar
   - time
   - vim-enhanced
   - wget
