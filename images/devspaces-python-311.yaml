@@ -11,5 +11,4 @@ modules:
   repositories:
   - path: "../modules"
   install:
-  - name: act
   - name: node-tools

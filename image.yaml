@@ -24,3 +24,4 @@ modules:
   - name: openshift-tools
   - name: aws-cli
   - name: yq
+  - name: act
