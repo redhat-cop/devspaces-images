@@ -1,5 +1,5 @@
 echo "Installing openshift client..."
-version=4.14.9
+version=4.18.9
 arch=linux
 curl -sLO "https://mirror.openshift.com/pub/openshift-v4/amd64/clients/ocp/${version}/openshift-client-${arch}-${version}.tar.gz"
 tar xzf ./openshift-client-${arch}-${version}.tar.gz
