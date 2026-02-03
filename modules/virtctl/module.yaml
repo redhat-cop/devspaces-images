@@ -1,0 +1,6 @@
+schema_version: 1
+name: virtctl
+version: v1.0
+description: "Installs virtctl CLI for managing virtual machines running via kubevirt"
+execute:
+- script: install.sh
