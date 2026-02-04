@@ -8,3 +8,4 @@ modules:
   - name: kubectx
   - name: stern
   - name: act
+  - name: virtctl
