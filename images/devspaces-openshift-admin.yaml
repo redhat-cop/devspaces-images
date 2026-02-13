@@ -9,3 +9,5 @@ modules:
   - name: stern
   - name: act
   - name: virtctl
+  - name: vault
+
