@@ -1,0 +1,6 @@
+schema_version: 1
+name: vault
+version: v1.0
+description: "Installs vault CLI for managing hashicorp vault"
+execute:
+- script: install.sh
