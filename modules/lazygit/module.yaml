@@ -1,0 +1,6 @@
+schema_version: 1
+name: lazygit
+version: v1.0
+description: "Installs the LazyGit cli as an alternative version control"
+execute:
+- script: install.sh
