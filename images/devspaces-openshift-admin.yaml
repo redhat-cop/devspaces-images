@@ -10,4 +10,4 @@ modules:
   - name: act
   - name: virtctl
   - name: vault
-
+  - name: lazygit
